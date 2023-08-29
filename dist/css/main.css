@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 1440px;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  display: flex;
+  border-radius: 7px;
+}
+main .img {
+  width: 40%;
+}
+main .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px 0 0 7px;
+}
+main section {
+  position: relative;
+  width: 60%;
+  background-color: white;
+  padding: 35px 35px 20px 35px;
+  font-size: 13px;
+  border-radius: 0 7px 7px 0;
+}
+main section h2,
+main section p {
+  margin-bottom: 15px;
+}
+main section h2 {
+  color: hsl(217, 19%, 35%);
+}
+main section p {
+  color: hsl(212, 23%, 69%);
+}
+main section footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+main section footer .avatar {
+  display: flex;
+}
+main section footer .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main section footer .avatar h3 {
+  color: hsl(217, 19%, 35%);
+}
+main section footer .avatar span {
+  color: hsl(212, 23%, 69%);
+}
+main section footer .share {
+  display: flex;
+  align-items: center;
+}
+main section footer .share .share-btn {
+  background-color: hsl(210, 46%, 95%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main section footer .share .share-content {
+  background-color: hsl(217, 19%, 35%);
+  padding: 15px 20px;
+  border-radius: 7px;
+  position: absolute;
+  bottom: 100px;
+  right: -50px;
+  display: flex;
+  opacity: 0;
+  transition: 0.8s;
+}
+main section footer .share .share-content.active {
+  opacity: 1;
+}
+main section footer .share .share-content::after {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  right: 90px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+main section footer .share .share-content .text {
+  color: hsl(210, 46%, 95%);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-right: 20px;
+}
+main section footer .share .share-content span {
+  cursor: pointer;
+}
+main section footer .share .share-content span:not(:last-child) {
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 375px;
+    flex-direction: column;
+  }
+  main .img {
+    width: 100%;
+  }
+  main .img img {
+    border-radius: 7px 7px 0 0;
+  }
+  main section {
+    width: 100%;
+    background-color: white;
+    padding: 30px 30px 20px 30px;
+    border-radius: 0 0 7px 7px;
+    top: -55px;
+  }
+  main section p {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  main section footer .share {
+    align-items: end;
+  }
+  main section footer .share .share-btn {
+    z-index: 2;
+  }
+  main section footer .share .share-content {
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    transition: 0.8s;
+    opacity: 0;
+    padding: 25px 30px;
+    border-radius: 0 0 7px 7px;
+  }
+  main section footer .share .share-content::after {
+    border-color: transparent;
+  }
+}/*# sourceMappingURL=main.css.map */
